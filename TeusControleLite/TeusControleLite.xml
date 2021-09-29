@@ -1,0 +1,1369 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TeusControleLite</name>
+    </assembly>
+    <members>
+        <member name="T:TeusControleLite.Application.Interfaces.Repositories.BaseRepositories.IBaseDoubleRepository`1">
+            <summary>
+            Interface genérica para repositório para entidade com chave composta. Declaração dos métodos para CRUD.
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+        </member>
+        <member name="M:TeusControleLite.Application.Interfaces.Repositories.BaseRepositories.IBaseDoubleRepository`1.Insert(`0)">
+            <summary>
+            Insere um novo registro
+            </summary>
+            <param name="obj"></param>
+        </member>
+        <member name="M:TeusControleLite.Application.Interfaces.Repositories.BaseRepositories.IBaseDoubleRepository`1.Update(`0)">
+            <summary>
+            Atualiza um registro
+            </summary>
+            <param name="obj"></param>
+        </member>
+        <member name="M:TeusControleLite.Application.Interfaces.Repositories.BaseRepositories.IBaseDoubleRepository`1.PhysicalDelete(System.Int64,System.Int64)">
+            <summary>
+            Deleta um registro a partir do Id
+            </summary>
+            <param name="id"></param>
+            <param name="id2"></param>
+        </member>
+        <member name="M:TeusControleLite.Application.Interfaces.Repositories.BaseRepositories.IBaseDoubleRepository`1.UpdateFields(`0,System.Linq.Expressions.Expression{System.Func{`0,System.Object}}[])">
+            <summary>
+            Atualizar alguns campos
+            </summary>
+            <param name="entity"></param>
+            <param name="includeProperties"></param>
+        </member>
+        <member name="M:TeusControleLite.Application.Interfaces.Repositories.BaseRepositories.IBaseDoubleRepository`1.Select(System.Int64,System.Int64)">
+            <summary>
+            Busca um registro por Id
+            </summary>
+            <param name="id"></param>
+            <param name="id2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TeusControleLite.Application.Interfaces.Repositories.BaseRepositories.IBaseDoubleRepository`1.Any(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Retorna se para a condição, existe tal registro
+            </summary>
+            <param name="filter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TeusControleLite.Application.Interfaces.Repositories.BaseRepositories.IBaseDoubleRepository`1.Query(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Constrói busca no banco
+            </summary>
+            <param name="filter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TeusControleLite.Application.Interfaces.Repositories.BaseRepositories.IBaseDoubleRepository`1.Count(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Busca quantidade de registros a partir do filtro
+            </summary>
+            <param name="filter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TeusControleLite.Application.Interfaces.Repositories.BaseRepositories.IBaseDoubleRepository`1.GetPaged(System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Busca página
+            </summary>
+            <param name="initialRow"></param>
+            <param name="pageSize"></param>
+            <param name="filter"></param>
+            <returns></returns>
+        </member>
+        <member name="T:TeusControleLite.Application.Interfaces.Repositories.BaseRepositories.IBaseRepository`1">
+            <summary>
+            Interface genérica para repositório. Declaração dos métodos para CRUD.
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+        </member>
+        <member name="M:TeusControleLite.Application.Interfaces.Repositories.BaseRepositories.IBaseRepository`1.Insert(`0)">
+            <summary>
+            Insere um novo registro
+            </summary>
+            <param name="obj"></param>
+        </member>
+        <member name="M:TeusControleLite.Application.Interfaces.Repositories.BaseRepositories.IBaseRepository`1.Update(`0)">
+            <summary>
+            Atualiza um registro
+            </summary>
+            <param name="obj"></param>
+        </member>
+        <member name="M:TeusControleLite.Application.Interfaces.Repositories.BaseRepositories.IBaseRepository`1.PhysicalDelete(System.Int64)">
+            <summary>
+            Deleta um registro a partir do Id
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:TeusControleLite.Application.Interfaces.Repositories.BaseRepositories.IBaseRepository`1.UpdateFields(`0,System.Linq.Expressions.Expression{System.Func{`0,System.Object}}[])">
+            <summary>
+            Atualizar alguns campos
+            </summary>
+            <param name="entity"></param>
+            <param name="includeProperties"></param>
+        </member>
+        <member name="M:TeusControleLite.Application.Interfaces.Repositories.BaseRepositories.IBaseRepository`1.Select">
+            <summary>
+            Busca todos os registros
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TeusControleLite.Application.Interfaces.Repositories.BaseRepositories.IBaseRepository`1.Select(System.Int64)">
+            <summary>
+            Busca um registro por Id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TeusControleLite.Application.Interfaces.Repositories.BaseRepositories.IBaseRepository`1.Any(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Retorna se para a condição, existe tal registro
+            </summary>
+            <param name="filter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TeusControleLite.Application.Interfaces.Repositories.BaseRepositories.IBaseRepository`1.Query(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Constrói busca no banco
+            </summary>
+            <param name="filter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TeusControleLite.Application.Interfaces.Repositories.BaseRepositories.IBaseRepository`1.Count(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Busca quantidade de registros a partir do filtro
+            </summary>
+            <param name="filter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TeusControleLite.Application.Interfaces.Repositories.BaseRepositories.IBaseRepository`1.GetPaged(System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Busca páginada
+            </summary>
+            <param name="initialRow"></param>
+            <param name="pageSize"></param>
+            <param name="filter"></param>
+            <returns></returns>
+        </member>
+        <member name="T:TeusControleLite.Application.Interfaces.Repository.IProductsRepository">
+            <summary>
+            Interface repositório para produtos.
+            </summary>
+        </member>
+        <member name="T:TeusControleLite.Application.Interfaces.Services.BaseServices.IBaseDoubleService`1">
+            <summary>
+            Interface da classe genérica dos serviços para entidades com chave composta. Declaração dos métodos para CRUD.
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+        </member>
+        <member name="M:TeusControleLite.Application.Interfaces.Services.BaseServices.IBaseDoubleService`1.LogicalDelete(System.Int64,System.Int64)">
+            <summary>
+            Exclui logicamente um registro a partir do id e id2
+            </summary>
+            <param name="id"></param>
+            <param name="id2"></param>
+        </member>
+        <member name="M:TeusControleLite.Application.Interfaces.Services.BaseServices.IBaseDoubleService`1.Add``3(``0)">
+            <summary>
+            Cria um novo registro
+            </summary>
+            <typeparam name="TInputModel"></typeparam>
+            <typeparam name="TOutputModel"></typeparam>
+            <typeparam name="TValidator"></typeparam>
+            <param name="inputModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TeusControleLite.Application.Interfaces.Services.BaseServices.IBaseDoubleService`1.Add``1(`0)">
+            <summary>
+            Cria um novo registro
+            </summary>
+            <typeparam name="TOutputModel"></typeparam>
+            <param name="inputModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TeusControleLite.Application.Interfaces.Services.BaseServices.IBaseDoubleService`1.PhysicalDelete(System.Int64,System.Int64)">
+            <summary>
+            Exclui fisicamente um registro a partir do id
+            </summary>
+            <param name="id"></param>
+            <param name="id2"></param>
+        </member>
+        <member name="M:TeusControleLite.Application.Interfaces.Services.BaseServices.IBaseDoubleService`1.Update``3(``0)">
+            <summary>
+            Atualiza um registro
+            </summary>
+            <typeparam name="TInputModel"></typeparam>
+            <typeparam name="TOutputModel"></typeparam>
+            <typeparam name="TValidator"></typeparam>
+            <param name="inputModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TeusControleLite.Application.Interfaces.Services.BaseServices.IBaseDoubleService`1.Count(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Busca quantidade de registros a partir do filtro
+            </summary>
+            <param name="filter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TeusControleLite.Application.Interfaces.Services.BaseServices.IBaseDoubleService`1.Any(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Retorna se para a condição, existe tal registro
+            </summary>
+            <param name="filter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TeusControleLite.Application.Interfaces.Services.BaseServices.IBaseDoubleService`1.Query(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Constrói busca no banco
+            </summary>
+            <param name="filter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TeusControleLite.Application.Interfaces.Services.BaseServices.IBaseDoubleService`1.UpdateSomeFields(`0,System.Linq.Expressions.Expression{System.Func{`0,System.Object}}[])">
+            <summary>
+            Atualiza alguns campos
+            </summary>
+            <param name="entity"></param>
+            <param name="updatedProperties"></param>
+        </member>
+        <member name="M:TeusControleLite.Application.Interfaces.Services.BaseServices.IBaseDoubleService`1.GetPaged(System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Busca páginada
+            </summary>
+            <param name="page"></param>
+            <param name="pageSize"></param>
+            <param name="filter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TeusControleLite.Application.Interfaces.Services.BaseServices.IBaseDoubleService`1.GetPaged(TeusControleLite.Infrastructure.Dtos.PaginatedInputModel)">
+            <summary>
+            Busca páginada com parâmetros
+            </summary>
+            <param name="pagingParams"></param>
+            <returns></returns>
+        </member>
+        <member name="T:TeusControleLite.Application.Interfaces.Services.BaseServices.IBaseService`1">
+            <summary>
+            Interface da classe genérica dos serviços. Declaração dos métodos para CRUD.
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+        </member>
+        <member name="M:TeusControleLite.Application.Interfaces.Services.BaseServices.IBaseService`1.Add``3(``0)">
+            <summary>
+            Cria um novo registro
+            </summary>
+            <typeparam name="TInputModel"></typeparam>
+            <typeparam name="TOutputModel"></typeparam>
+            <typeparam name="TValidator"></typeparam>
+            <param name="inputModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TeusControleLite.Application.Interfaces.Services.BaseServices.IBaseService`1.Add``1(`0)">
+            <summary>
+            Cria um novo registro
+            </summary>
+            <typeparam name="TOutputModel"></typeparam>
+            <param name="inputModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TeusControleLite.Application.Interfaces.Services.BaseServices.IBaseService`1.PhysicalDelete(System.Int64)">
+            <summary>
+            Exclui fisicamente um registro a partir do id
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:TeusControleLite.Application.Interfaces.Services.BaseServices.IBaseService`1.Update``3(``0)">
+            <summary>
+            Atualiza um registro
+            </summary>
+            <typeparam name="TInputModel"></typeparam>
+            <typeparam name="TOutputModel"></typeparam>
+            <typeparam name="TValidator"></typeparam>
+            <param name="inputModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TeusControleLite.Application.Interfaces.Services.BaseServices.IBaseService`1.Count(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Busca quantidade de registros a partir do filtro
+            </summary>
+            <param name="filter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TeusControleLite.Application.Interfaces.Services.BaseServices.IBaseService`1.Any(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Retorna se para a condição, existe tal registro
+            </summary>
+            <param name="filter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TeusControleLite.Application.Interfaces.Services.BaseServices.IBaseService`1.Query(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Constrói busca no banco
+            </summary>
+            <param name="filter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TeusControleLite.Application.Interfaces.Services.BaseServices.IBaseService`1.UpdateSomeFields(`0,System.Linq.Expressions.Expression{System.Func{`0,System.Object}}[])">
+            <summary>
+            Atualiza alguns campos
+            </summary>
+            <param name="entity"></param>
+            <param name="updatedProperties"></param>
+        </member>
+        <member name="M:TeusControleLite.Application.Interfaces.Services.BaseServices.IBaseService`1.GetPaged(TeusControleLite.Infrastructure.Dtos.PaginatedInputModel)">
+            <summary>
+            Busca páginada com parâmetros
+            </summary>
+            <param name="pagingParams"></param>
+            <returns></returns>
+        </member>
+        <member name="T:TeusControleLite.Application.Interfaces.Services.IProductsService">
+            <summary>
+            Inteface para serviço de usuários. Declaração de métodos
+            </summary>
+        </member>
+        <member name="M:TeusControleLite.Application.Interfaces.Services.IProductsService.Insert(TeusControleLite.Domain.Dtos.CreateProductsModel)">
+            <summary>
+            Insere um novo usuário
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TeusControleLite.Application.Interfaces.Services.IProductsService.Update(TeusControleLite.Domain.Dtos.UpdateProductsModel)">
+            <summary>
+            Atualiza um registro de usuário
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TeusControleLite.Application.Interfaces.Services.IProductsService.GetById(System.Int64)">
+            <summary>
+            Busca um registro por Id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TeusControleLite.Application.Interfaces.Services.IProductsService.DeleteById(System.Int64)">
+            <summary>
+            Deleta um registro de usuário
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:TeusControleLite.Application.Interfaces.Services.IProductsService.Get(TeusControleLite.Infrastructure.Dtos.PaginatedInputModel)" -->
+        <member name="M:TeusControleLite.Application.Interfaces.Services.IProductsService.Undelete(System.Int32)">
+            <summary>
+            Desfaz exclusão
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:TeusControleLite.Application.Services.BaseDoubleService`1">
+            <summary>
+            Classe de serviço genérica para entidades associativas. CRUD genérico.
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <summary>
+            Classe de serviço genérica. CRUD genérico.
+            </summary>
+        </member>
+        <member name="M:TeusControleLite.Application.Services.BaseDoubleService`1.#ctor(TeusControleLite.Application.Interfaces.Repositories.BaseRepositories.IBaseDoubleRepository{`0},AutoMapper.IMapper)">
+            <summary>
+            Construtor de classe base para service de chave composta
+            </summary>
+            <param name="baseRepository"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:TeusControleLite.Application.Services.BaseDoubleService`1.LogicalDelete(System.Int64,System.Int64)">
+            <summary>
+            Exclui logicamente um registro a partir do id e id2
+            </summary>
+            <param name="id"></param>
+            <param name="id2"></param>
+        </member>
+        <member name="M:TeusControleLite.Application.Services.BaseDoubleService`1.Add``1(`0)">
+            <summary>
+            Cria um novo registro
+            </summary>
+            <typeparam name="TOutputModel"></typeparam>
+            <param name="inputModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TeusControleLite.Application.Services.BaseDoubleService`1.PhysicalDelete(System.Int64,System.Int64)">
+            <summary>
+            Exclui fisicamente um registro a partir do id
+            </summary>
+            <param name="id"></param>
+            <param name="id2"></param>
+        </member>
+        <member name="M:TeusControleLite.Application.Services.BaseDoubleService`1.Update``3(``0)">
+            <summary>
+            Atualiza um registro
+            </summary>
+            <typeparam name="TInputModel"></typeparam>
+            <typeparam name="TOutputModel"></typeparam>
+            <typeparam name="TValidator"></typeparam>
+            <param name="inputModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TeusControleLite.Application.Services.BaseDoubleService`1.UpdateSomeFields(`0,System.Linq.Expressions.Expression{System.Func{`0,System.Object}}[])">
+            <summary>
+            Atualiza alguns campos
+            </summary>
+            <param name="entity"></param>
+            <param name="updatedProperties"></param>
+        </member>
+        <member name="M:TeusControleLite.Application.Services.BaseDoubleService`1.Validate(`0,FluentValidation.AbstractValidator{`0})">
+            <summary>
+            Valida o objeto a ser cadastrado
+            </summary>
+            <param name="obj"></param>
+            <param name="validator"></param>
+        </member>
+        <member name="M:TeusControleLite.Application.Services.BaseDoubleService`1.Any(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Retorna se para a condição, existe tal registro
+            </summary>
+            <param name="filter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TeusControleLite.Application.Services.BaseDoubleService`1.Count(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Busca quantidade de registros a partir do filtro
+            </summary>
+            <param name="filter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TeusControleLite.Application.Services.BaseDoubleService`1.CalcStartRow(System.Int32,System.Int32)">
+            <summary>
+            Calcula qual a linha de start da listagem, conforme número da pagina atual e total de paginas
+            </summary>
+            <param name="pageNumber"></param>
+            <param name="pageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TeusControleLite.Application.Services.BaseDoubleService`1.Query(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Constrói busca no banco
+            </summary>
+            <param name="filter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TeusControleLite.Application.Services.BaseDoubleService`1.GetPaged(System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Busca páginada
+            </summary>
+            <param name="page"></param>
+            <param name="pageSize"></param>
+            <param name="filter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TeusControleLite.Application.Services.BaseDoubleService`1.GetPaged(TeusControleLite.Infrastructure.Dtos.PaginatedInputModel)">
+            <summary>
+            Busca páginada com parâmetros
+            </summary>
+            <param name="pagingParams"></param>
+            <returns></returns>
+        </member>
+        <member name="T:TeusControleLite.Application.Services.BaseService`1">
+            <summary>
+            Classe de serviço genérica. CRUD genérico.
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <summary>
+            Classe de serviço genérica. CRUD genérico.
+            </summary>
+        </member>
+        <member name="M:TeusControleLite.Application.Services.BaseService`1.Add``3(``0)">
+            <summary>
+            Cria um novo registro
+            </summary>
+            <typeparam name="TInputModel"></typeparam>
+            <typeparam name="TOutputModel"></typeparam>
+            <typeparam name="TValidator"></typeparam>
+            <param name="inputModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TeusControleLite.Application.Services.BaseService`1.Add``1(`0)">
+            <summary>
+            Cria um novo registro
+            </summary>
+            <typeparam name="TOutputModel"></typeparam>
+            <param name="inputModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TeusControleLite.Application.Services.BaseService`1.PhysicalDelete(System.Int64)">
+            <summary>
+            Exclui fisicamente um registro a partir do id
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:TeusControleLite.Application.Services.BaseService`1.LogicalDelete(System.Int64)">
+            <summary>
+            Exclui logicamente um registro a partir do id
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:TeusControleLite.Application.Services.BaseService`1.Update``3(``0)">
+            <summary>
+            Atualiza um registro
+            </summary>
+            <typeparam name="TInputModel"></typeparam>
+            <typeparam name="TOutputModel"></typeparam>
+            <typeparam name="TValidator"></typeparam>
+            <param name="inputModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TeusControleLite.Application.Services.BaseService`1.Validate(`0,FluentValidation.AbstractValidator{`0})">
+            <summary>
+            Valida o objeto a ser cadastrado
+            </summary>
+            <param name="obj"></param>
+            <param name="validator"></param>
+        </member>
+        <member name="M:TeusControleLite.Application.Services.BaseService`1.UpdateSomeFields(`0,System.Linq.Expressions.Expression{System.Func{`0,System.Object}}[])">
+            <summary>
+            Atualiza alguns campos
+            </summary>
+            <param name="entity"></param>
+            <param name="updatedProperties"></param>
+        </member>
+        <member name="M:TeusControleLite.Application.Services.BaseService`1.Count(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Busca quantidade de registros a partir do filtro
+            </summary>
+            <param name="filter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TeusControleLite.Application.Services.BaseService`1.CalcStartRow(System.Int32,System.Int32)">
+            <summary>
+            Calcula qual a linha de start da listagem, conforme número da pagina atual e total de paginas
+            </summary>
+            <param name="pageNumber"></param>
+            <param name="pageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TeusControleLite.Application.Services.BaseService`1.Any(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Retorna se para a condição, existe tal registro
+            </summary>
+            <param name="filter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TeusControleLite.Application.Services.BaseService`1.Query(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Constrói busca no banco
+            </summary>
+            <param name="filter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TeusControleLite.Application.Services.BaseService`1.GetPaged(System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Busca páginada
+            </summary>
+            <param name="page"></param>
+            <param name="pageSize"></param>
+            <param name="filter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TeusControleLite.Application.Services.BaseService`1.GetPaged(TeusControleLite.Infrastructure.Dtos.PaginatedInputModel)">
+            <summary>
+            Busca páginada com parâmetros
+            </summary>
+            <param name="pagingParams"></param>
+            <returns></returns>
+        </member>
+        <member name="T:TeusControleLite.Application.Services.ProductsService">
+            <summary>
+            Serciços da entidade produtos
+            </summary>
+        </member>
+        <member name="M:TeusControleLite.Application.Services.ProductsService.#ctor(TeusControleLite.Application.Interfaces.Repository.IProductsRepository,AutoMapper.IMapper)">
+            <summary>
+            Construtor classe de serviços da entidade produtos
+            </summary>
+            <param name="baseRepository"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:TeusControleLite.Application.Services.ProductsService.Insert(TeusControleLite.Domain.Dtos.CreateProductsModel)">
+            <summary>
+            Insere um novo produto
+            </summary>
+            <param name="product"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TeusControleLite.Application.Services.ProductsService.Update(TeusControleLite.Domain.Dtos.UpdateProductsModel)">
+            <summary>
+            Atualiza um registro de produto
+            </summary>
+            <param name="product"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TeusControleLite.Application.Services.ProductsService.GetById(System.Int64)">
+            <summary>
+            Busca registro por id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TeusControleLite.Application.Services.ProductsService.DeleteById(System.Int64)">
+            <summary>
+            Deleta um registro de produto
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TeusControleLite.Application.Services.ProductsService.Get(TeusControleLite.Infrastructure.Dtos.PaginatedInputModel)">
+            <summary>
+            Busca lista de todos produtos levando em consideração parametros de filtragem e ordenação
+            </summary>
+            <param name="pagingParams"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TeusControleLite.Application.Services.ProductsService.Undelete(System.Int32)">
+            <summary>
+            Desfaz exclusão
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:TeusControleLite.Application.Validators.ProductsValidator">
+            <summary>
+            Validação para objeto do tipo usuário
+            </summary>
+        </member>
+        <member name="T:TeusControleLite.Domain.Dtos.CreateProductsModel">
+            <summary>
+            Dto de inserção de produto
+            </summary>
+        </member>
+        <member name="P:TeusControleLite.Domain.Dtos.CreateProductsModel.Gtin">
+            <summary>
+            Código de barras
+            Global Trade Item Number
+            </summary>
+        </member>
+        <member name="P:TeusControleLite.Domain.Dtos.CreateProductsModel.Description">
+            <summary>
+            Descrição
+            </summary>
+        </member>
+        <member name="P:TeusControleLite.Domain.Dtos.CreateProductsModel.Price">
+            <summary>
+            Preço
+            </summary>
+        </member>
+        <member name="P:TeusControleLite.Domain.Dtos.CreateProductsModel.BrandName">
+            <summary>
+            Marca
+            </summary>
+        </member>
+        <member name="P:TeusControleLite.Domain.Dtos.CreateProductsModel.GpcCode">
+            <summary>
+            Código da classificação global de produtos 
+            Global Product Classification
+            </summary>
+        </member>
+        <member name="P:TeusControleLite.Domain.Dtos.CreateProductsModel.GpcDescription">
+            <summary>
+            Descrição do GPC
+            </summary>
+        </member>
+        <member name="P:TeusControleLite.Domain.Dtos.CreateProductsModel.NcmCode">
+            <summary>
+            Código da Nomenclatura Comum do Mercosul
+            </summary>
+        </member>
+        <member name="P:TeusControleLite.Domain.Dtos.CreateProductsModel.NcmDescription">
+            <summary>
+            Descrição do NCM
+            </summary>
+        </member>
+        <member name="P:TeusControleLite.Domain.Dtos.CreateProductsModel.NcmFullDescription">
+            <summary>
+            Descrição completa do NCM
+            </summary>
+        </member>
+        <member name="P:TeusControleLite.Domain.Dtos.CreateProductsModel.Thumbnail">
+            <summary>
+            Url - Imagem do produto
+            </summary>
+        </member>
+        <member name="P:TeusControleLite.Domain.Dtos.CreateProductsModel.InStock">
+            <summary>
+            Em estoque
+            </summary>
+        </member>
+        <member name="T:TeusControleLite.Domain.Dtos.UpdateProductsModel">
+            <summary>
+            Dto para atualizar um produto
+            </summary>
+        </member>
+        <member name="P:TeusControleLite.Domain.Dtos.UpdateProductsModel.Id">
+            <summary>
+            Identificador
+            </summary>
+        </member>
+        <member name="P:TeusControleLite.Domain.Dtos.UpdateProductsModel.Active">
+            <summary>
+            Está ativo?
+            </summary>
+        </member>
+        <member name="T:TeusControleLite.Domain.Dtos.ProductsModel">
+            <summary>
+            Dto com informações do produto
+            </summary>
+        </member>
+        <member name="T:TeusControleLite.Domain.Models.CommonModels.BaseDoubleEntity">
+            <summary>
+            Classe genérica para entidades
+            </summary>
+        </member>
+        <member name="P:TeusControleLite.Domain.Models.CommonModels.BaseDoubleEntity.Id">
+            <summary>
+            Identificador
+            </summary>
+        </member>
+        <member name="P:TeusControleLite.Domain.Models.CommonModels.BaseDoubleEntity.Id2">
+            <summary>
+            Identificador 2
+            </summary>
+        </member>
+        <member name="P:TeusControleLite.Domain.Models.CommonModels.BaseDoubleEntity.Active">
+            <summary>
+            Está ativo?
+            </summary>
+        </member>
+        <member name="P:TeusControleLite.Domain.Models.CommonModels.BaseDoubleEntity.Deleted">
+            <summary>
+            Está deletado?
+            </summary>
+        </member>
+        <member name="P:TeusControleLite.Domain.Models.CommonModels.BaseDoubleEntity.CreatedDate">
+            <summary>
+            Data de criação do registro
+            </summary>
+        </member>
+        <member name="P:TeusControleLite.Domain.Models.CommonModels.BaseDoubleEntity.LastChange">
+            <summary>
+            Data da última atualização do registro
+            </summary>
+        </member>
+        <member name="T:TeusControleLite.Domain.Models.CommonModels.BaseEntity">
+            <summary>
+            Classe genérica para entidades
+            </summary>
+        </member>
+        <member name="P:TeusControleLite.Domain.Models.CommonModels.BaseEntity.Id">
+            <summary>
+            Identificador - ou chave primaria composta
+            </summary>
+        </member>
+        <member name="P:TeusControleLite.Domain.Models.CommonModels.BaseEntity.Active">
+            <summary>
+            Está ativo?
+            </summary>
+        </member>
+        <member name="P:TeusControleLite.Domain.Models.CommonModels.BaseEntity.Deleted">
+            <summary>
+            Está deletado?
+            </summary>
+        </member>
+        <member name="P:TeusControleLite.Domain.Models.CommonModels.BaseEntity.CreatedDate">
+            <summary>
+            Data de criação do registro
+            </summary>
+        </member>
+        <member name="P:TeusControleLite.Domain.Models.CommonModels.BaseEntity.LastChange">
+            <summary>
+            Data da última atualização do registro
+            </summary>
+        </member>
+        <member name="T:TeusControleLite.Domain.Models.Products">
+            <summary>
+            Classe de produtos
+            </summary>
+        </member>
+        <member name="M:TeusControleLite.Domain.Models.Products.#ctor">
+            <summary>
+            Construtor classe modelo da entidade produtos
+            </summary>
+        </member>
+        <member name="P:TeusControleLite.Domain.Models.Products.Gtin">
+            <summary>
+            Código de barras
+            Global Trade Item Number
+            </summary>
+        </member>
+        <member name="P:TeusControleLite.Domain.Models.Products.Description">
+            <summary>
+            Descrição
+            </summary>
+        </member>
+        <member name="P:TeusControleLite.Domain.Models.Products.Price">
+            <summary>
+            Preço
+            </summary>
+        </member>
+        <member name="P:TeusControleLite.Domain.Models.Products.BrandName">
+            <summary>
+            Marca
+            </summary>
+        </member>
+        <member name="P:TeusControleLite.Domain.Models.Products.GpcCode">
+            <summary>
+            Código da classificação global de produtos 
+            Global Product Classification
+            </summary>
+        </member>
+        <member name="P:TeusControleLite.Domain.Models.Products.GpcDescription">
+            <summary>
+            Descrição do GPC
+            </summary>
+        </member>
+        <member name="P:TeusControleLite.Domain.Models.Products.NcmCode">
+            <summary>
+            Código da Nomenclatura Comum do Mercosul
+            </summary>
+        </member>
+        <member name="P:TeusControleLite.Domain.Models.Products.NcmDescription">
+            <summary>
+            Descrição do NCM
+            </summary>
+        </member>
+        <member name="P:TeusControleLite.Domain.Models.Products.NcmFullDescription">
+            <summary>
+            Descrição completa do NCM
+            </summary>
+        </member>
+        <member name="P:TeusControleLite.Domain.Models.Products.Thumbnail">
+            <summary>
+            Url - Imagem do produto
+            </summary>
+        </member>
+        <member name="P:TeusControleLite.Domain.Models.Products.InStock">
+            <summary>
+            Em estoque
+            </summary>
+        </member>
+        <member name="T:TeusControleLite.Infrastructure.Context.ApiContext">
+            <summary>
+            Contexto da api
+            Classe de acesso a dados
+            </summary>
+        </member>
+        <member name="M:TeusControleLite.Infrastructure.Context.ApiContext.#ctor">
+            <summary>
+            Construtor da classe contexto da api
+            </summary>
+        </member>
+        <member name="M:TeusControleLite.Infrastructure.Context.ApiContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{TeusControleLite.Infrastructure.Context.ApiContext})">
+            <summary>
+            Construtor da classe contexto da api
+            </summary>
+            <param name="options"></param>
+        </member>
+        <member name="P:TeusControleLite.Infrastructure.Context.ApiContext.Products">
+            <summary>
+            Entidade produtos
+            </summary>
+        </member>
+        <member name="M:TeusControleLite.Infrastructure.Context.ApiContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            Configuração do contexto da base de dados
+            </summary>
+            <param name="modelBuilder"></param>
+        </member>
+        <member name="T:TeusControleLite.Infrastructure.Controllers.ProductsController">
+            <summary>
+            Controlador para CRUD de produtos
+            </summary>
+        </member>
+        <member name="M:TeusControleLite.Infrastructure.Controllers.ProductsController.#ctor(TeusControleLite.Application.Interfaces.Services.IProductsService)">
+            <summary>
+            Endpoints para produtos
+            </summary>
+            <param name="service"></param>
+        </member>
+        <member name="M:TeusControleLite.Infrastructure.Controllers.ProductsController.Insert(TeusControleLite.Domain.Dtos.CreateProductsModel)">
+            <summary>
+            Inserir um novo produto
+            </summary>
+            <param name="sentProduct"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TeusControleLite.Infrastructure.Controllers.ProductsController.Update(TeusControleLite.Domain.Dtos.UpdateProductsModel)">
+            <summary>
+            Atualizar um produto
+            </summary>
+            <param name="sentProduct"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TeusControleLite.Infrastructure.Controllers.ProductsController.GetById(System.Int64)">
+            <summary>
+            Buscar um produto por id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TeusControleLite.Infrastructure.Controllers.ProductsController.GetPaged(TeusControleLite.Infrastructure.Dtos.PaginatedInputModel)">
+            <summary>
+            Busca todos os produtos
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TeusControleLite.Infrastructure.Controllers.ProductsController.Delete(System.Int64)">
+            <summary>
+            Excluir um produto por id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TeusControleLite.Infrastructure.Controllers.ProductsController.Undelete(System.Int32)">
+            <summary>
+            Desfaz exclusão
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:TeusControleLite.Infrastructure.Dtos.FilterParams.ColumnName">
+            <summary>
+            Nome da coluna a ser filtrada
+            </summary>
+        </member>
+        <member name="P:TeusControleLite.Infrastructure.Dtos.FilterParams.FilterValue">
+            <summary>
+            Valor buscado no filtro
+            </summary>
+        </member>
+        <member name="P:TeusControleLite.Infrastructure.Dtos.FilterParams.FilterOption">
+            <summary>
+            Tipo do filtro a ser aplicado
+            </summary>
+        </member>
+        <member name="T:TeusControleLite.Infrastructure.Dtos.PageResponse">
+            <summary>
+            Retorno para busca páginada
+            </summary>
+        </member>
+        <member name="P:TeusControleLite.Infrastructure.Dtos.PageResponse.Data">
+            <summary>
+            Informações
+            </summary>
+        </member>
+        <member name="P:TeusControleLite.Infrastructure.Dtos.PageResponse.Count">
+            <summary>
+            Quantidade de registros
+            </summary>
+        </member>
+        <member name="T:TeusControleLite.Infrastructure.Dtos.PaginatedInputModel">
+            <summary>  
+            This class contains properites used for paging, sorting, grouping, filtering and will be used as a parameter model  
+              
+            SortOrder   - enum of sorting orders  
+            SortColumn  - Name of the column on which sorting has to be done,  
+                          as for now sorting can be performed only on one column at a time.  
+            FilterParams - Filtering can be done on multiple columns and for one column multiple values can be selected  
+                          key :- will be column name, Value :- will be array list of multiple values  
+            PageNumber   - Page Number to be displayed in UI, default to 1  
+            PageSize     - Number of items per page, default to 25  
+            </summary>  
+        </member>
+        <member name="P:TeusControleLite.Infrastructure.Dtos.PaginatedInputModel.SortingParams">
+            <summary>
+            Parâmetros de ordenação
+            </summary>
+        </member>
+        <member name="P:TeusControleLite.Infrastructure.Dtos.PaginatedInputModel.FilterParam">
+            <summary>
+            Parâmetros de filtragem
+            </summary>
+        </member>
+        <member name="F:TeusControleLite.Infrastructure.Dtos.PaginatedInputModel.pageNumber">
+            <summary>
+            Número da página
+            </summary>
+        </member>
+        <member name="P:TeusControleLite.Infrastructure.Dtos.PaginatedInputModel.PageNumber">
+            <summary>
+            Número da página
+            </summary>
+        </member>
+        <member name="F:TeusControleLite.Infrastructure.Dtos.PaginatedInputModel.pageSize">
+            <summary>
+            Tamanho da página
+            </summary>
+        </member>
+        <member name="P:TeusControleLite.Infrastructure.Dtos.PaginatedInputModel.PageSize">
+            <summary>
+            Tamanho da página
+            </summary>
+        </member>
+        <member name="T:TeusControleLite.Infrastructure.Dtos.ResponseMessages`1">
+            <summary>
+            Classe de retorno para 
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:TeusControleLite.Infrastructure.Dtos.ResponseMessages`1.Status">
+            <summary>
+            Situação
+            </summary>
+        </member>
+        <member name="P:TeusControleLite.Infrastructure.Dtos.ResponseMessages`1.TimeStamp">
+            <summary>
+            Data e hora
+            </summary>
+        </member>
+        <member name="P:TeusControleLite.Infrastructure.Dtos.ResponseMessages`1.Messages">
+            <summary>
+            Mensagens
+            </summary>
+        </member>
+        <member name="P:TeusControleLite.Infrastructure.Dtos.ResponseMessages`1.Data">
+            <summary>
+            Informações
+            </summary>
+        </member>
+        <member name="M:TeusControleLite.Infrastructure.Dtos.ResponseMessages`1.AddMessage(System.String)">
+            <summary>
+            Adiciona uma mensagem a ser retornado
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="P:TeusControleLite.Infrastructure.Dtos.Messages.Message">
+            <summary>
+            Mensagem
+            </summary>
+        </member>
+        <member name="T:TeusControleLite.Infrastructure.Dtos.ReturnData`1">
+            <summary>
+            Classe de retorno para métodos internos
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:TeusControleLite.Infrastructure.Dtos.ReturnData`1.Sucess">
+            <summary>
+            Situação do retorno - verdadeiro/falso
+            </summary>
+        </member>
+        <member name="P:TeusControleLite.Infrastructure.Dtos.ReturnData`1.Data">
+            <summary>
+            Informação
+            </summary>
+        </member>
+        <member name="P:TeusControleLite.Infrastructure.Dtos.SortingParams.SortOrder">
+            <summary>
+            Tipo de ordenação
+            </summary>
+        </member>
+        <member name="P:TeusControleLite.Infrastructure.Dtos.SortingParams.ColumnName">
+            <summary>
+            Nome da coluna
+            </summary>
+        </member>
+        <member name="F:TeusControleLite.Infrastructure.Enums.FilterEnum.StartsWith">
+            <summary>
+            1 - Começa com
+            </summary>
+        </member>
+        <member name="F:TeusControleLite.Infrastructure.Enums.FilterEnum.EndsWith">
+            <summary>
+            2 - Termina com
+            </summary>
+        </member>
+        <member name="F:TeusControleLite.Infrastructure.Enums.FilterEnum.Contains">
+            <summary>
+            3 - Contém
+            </summary>
+        </member>
+        <member name="F:TeusControleLite.Infrastructure.Enums.FilterEnum.DoesNotContain">
+            <summary>
+            4 - Não Contém
+            </summary>
+        </member>
+        <member name="F:TeusControleLite.Infrastructure.Enums.FilterEnum.IsEmpty">
+            <summary>
+            5 - Está Vazio
+            </summary>
+        </member>
+        <member name="F:TeusControleLite.Infrastructure.Enums.FilterEnum.IsNotEmpty">
+            <summary>
+            6 - Não Está Vazio
+            </summary>
+        </member>
+        <member name="F:TeusControleLite.Infrastructure.Enums.FilterEnum.IsGreaterThan">
+            <summary>
+            7 - É Maior
+            </summary>
+        </member>
+        <member name="F:TeusControleLite.Infrastructure.Enums.FilterEnum.IsGreaterThanOrEqualTo">
+            <summary>
+            8 - É Maior ou Igual
+            </summary>
+        </member>
+        <member name="F:TeusControleLite.Infrastructure.Enums.FilterEnum.IsLessThan">
+            <summary>
+            9 - É Menor
+            </summary>
+        </member>
+        <member name="F:TeusControleLite.Infrastructure.Enums.FilterEnum.IsLessThanOrEqualTo">
+            <summary>
+            10 - É Menor ou Igual
+            </summary>
+        </member>
+        <member name="F:TeusControleLite.Infrastructure.Enums.FilterEnum.IsEqualTo">
+            <summary>
+            11 - É Igual
+            </summary>
+        </member>
+        <member name="F:TeusControleLite.Infrastructure.Enums.FilterEnum.IsNotEqualTo">
+            <summary>
+            12 - Ñão é Igual
+            </summary>
+        </member>
+        <member name="T:TeusControleLite.Infrastructure.Enums.SortEnum">
+            <summary>
+            Enumeradores para ordenação
+            </summary>
+        </member>
+        <member name="F:TeusControleLite.Infrastructure.Enums.SortEnum.Asc">
+            <summary>
+            1 - Ascendente
+            </summary>
+        </member>
+        <member name="F:TeusControleLite.Infrastructure.Enums.SortEnum.Desc">
+            <summary>
+            2 - Descendente
+            </summary>
+        </member>
+        <member name="T:TeusControleLite.Infrastructure.Queries.Filter`1">
+            <summary>
+            Classe genérica responsável por filtrar informações
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:TeusControleLite.Infrastructure.Queries.PaginatedList`1.Data">
+            <summary>
+            Informações
+            </summary>
+        </member>
+        <member name="P:TeusControleLite.Infrastructure.Queries.PaginatedList`1.PageIndex">
+            <summary>
+            Índice da pagina
+            </summary>
+        </member>
+        <member name="P:TeusControleLite.Infrastructure.Queries.PaginatedList`1.TotalPages">
+            <summary>
+            Total de páginas
+            </summary>
+        </member>
+        <member name="P:TeusControleLite.Infrastructure.Queries.PaginatedList`1.TotalItems">
+            <summary>
+            Total de itens
+            </summary>
+        </member>
+        <member name="P:TeusControleLite.Infrastructure.Queries.PaginatedList`1.HasPreviousPage">
+            <summary>
+            Tem página anterior?
+            </summary>
+        </member>
+        <member name="P:TeusControleLite.Infrastructure.Queries.PaginatedList`1.HasNextPage">
+            <summary>
+            Tem próxima página?
+            </summary>
+        </member>
+        <member name="M:TeusControleLite.Infrastructure.Queries.PaginatedList`1.CreateAsync(System.Collections.Generic.IList{`0},System.Int32,System.Int32)">
+            <summary>
+            Cria busca assíncrona
+            </summary>
+            <param name="source"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TeusControleLite.Infrastructure.Queries.Sorting`1.GroupingData(System.Collections.Generic.IEnumerable{`0},System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Actual grouping will be done in ui,   
+            from api we will send sorted data based on grouping columns  
+            </summary>  
+            <param name="data"></param>  
+            <param name="groupingColumns"></param>  
+            <returns></returns>  
+        </member>
+        <member name="M:TeusControleLite.Infrastructure.Queries.Sorting`1.SortData(System.Collections.Generic.IEnumerable{`0},System.Collections.Generic.IEnumerable{TeusControleLite.Infrastructure.Dtos.SortingParams})">
+            <summary>
+             Sorting the data on multiple columns using reflection
+            </summary>
+            <param name="data"></param>
+            <param name="sortingParams"></param>
+            <returns></returns>
+        </member>
+        <member name="T:TeusControleLite.Infrastructure.Repository.BaseDoubleRepository`1">
+            <summary>
+            Classe genérica para repositório. CRUD genério.
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <summary>
+            Classe genérica para repositório. CRUD genério.
+            </summary>
+        </member>
+        <member name="M:TeusControleLite.Infrastructure.Repository.BaseDoubleRepository`1.Insert(`0)">
+            <summary>
+            Insere um novo registro
+            </summary>
+            <param name="obj"></param>
+        </member>
+        <member name="M:TeusControleLite.Infrastructure.Repository.BaseDoubleRepository`1.Update(`0)">
+            <summary>
+            Atualiza um registro
+            </summary>
+            <param name="obj"></param>
+        </member>
+        <member name="M:TeusControleLite.Infrastructure.Repository.BaseDoubleRepository`1.PhysicalDelete(System.Int64,System.Int64)">
+            <summary>
+            Deleta um registro a partir do Id
+            </summary>
+            <param name="id"></param>
+            <param name="id2"></param>
+        </member>
+        <member name="M:TeusControleLite.Infrastructure.Repository.BaseDoubleRepository`1.UpdateFields(`0,System.Linq.Expressions.Expression{System.Func{`0,System.Object}}[])">
+            <summary>
+            Atualizar alguns campos
+            </summary>
+            <param name="entity"></param>
+            <param name="includeProperties"></param>
+        </member>
+        <member name="M:TeusControleLite.Infrastructure.Repository.BaseDoubleRepository`1.Select(System.Int64,System.Int64)">
+            <summary>
+            Busca um registro por Id
+            </summary>
+            <param name="id"></param>
+            <param name="id2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TeusControleLite.Infrastructure.Repository.BaseDoubleRepository`1.Any(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Retorna se para a condição, existe tal registro
+            </summary>
+            <param name="filter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TeusControleLite.Infrastructure.Repository.BaseDoubleRepository`1.Query(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Constrói busca no banco
+            </summary>
+            <param name="filter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TeusControleLite.Infrastructure.Repository.BaseDoubleRepository`1.Count(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Busca quantidade de registros a partir do filtro
+            </summary>
+            <param name="filter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TeusControleLite.Infrastructure.Repository.BaseDoubleRepository`1.GetPaged(System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Busca página
+            </summary>
+            <param name="initialRow"></param>
+            <param name="pageSize"></param>
+            <param name="filter"></param>
+            <returns></returns>
+        </member>
+        <member name="T:TeusControleLite.Infrastructure.Repository.BaseRepository`1">
+            <summary>
+            Classe genérica para repositório. CRUD genério.
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <summary>
+            Classe genérica para repositório. CRUD genério.
+            </summary>
+        </member>
+        <member name="F:TeusControleLite.Infrastructure.Repository.BaseRepository`1._context">
+            <summary>
+            Acesso a dados
+            </summary>
+        </member>
+        <member name="M:TeusControleLite.Infrastructure.Repository.BaseRepository`1.#ctor(TeusControleLite.Infrastructure.Context.ApiContext)">
+            <summary>
+            Construtor classe genérica para repositórios
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:TeusControleLite.Infrastructure.Repository.BaseRepository`1.Insert(`0)">
+            <summary>
+            Insere um novo registro
+            </summary>
+            <param name="obj"></param>
+        </member>
+        <member name="M:TeusControleLite.Infrastructure.Repository.BaseRepository`1.Update(`0)">
+            <summary>
+            Atualiza um registro
+            </summary>
+            <param name="obj"></param>
+        </member>
+        <member name="M:TeusControleLite.Infrastructure.Repository.BaseRepository`1.PhysicalDelete(System.Int64)">
+            <summary>
+            Deleta um registro a partir do Id
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:TeusControleLite.Infrastructure.Repository.BaseRepository`1.UpdateFields(`0,System.Linq.Expressions.Expression{System.Func{`0,System.Object}}[])">
+            <summary>
+            Atualizar alguns campos
+            </summary>
+            <param name="entity"></param>
+            <param name="includeProperties"></param>
+        </member>
+        <member name="M:TeusControleLite.Infrastructure.Repository.BaseRepository`1.Select">
+            <summary>
+            Busca todos os registros
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TeusControleLite.Infrastructure.Repository.BaseRepository`1.Select(System.Int64)">
+            <summary>
+            Busca um registro por Id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TeusControleLite.Infrastructure.Repository.BaseRepository`1.Any(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Retorna se para a condição, existe tal registro
+            </summary>
+            <param name="filter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TeusControleLite.Infrastructure.Repository.BaseRepository`1.Query(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Constrói busca no banco
+            </summary>
+            <param name="filter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TeusControleLite.Infrastructure.Repository.BaseRepository`1.Count(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Busca quantidade de registros a partir do filtro
+            </summary>
+            <param name="filter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TeusControleLite.Infrastructure.Repository.BaseRepository`1.GetPaged(System.Int32,System.Int32,System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Busca página
+            </summary>
+            <param name="initialRow"></param>
+            <param name="pageSize"></param>
+            <param name="filter"></param>
+            <returns></returns>
+        </member>
+        <member name="T:TeusControleLite.Infrastructure.Repository.ProductsRepository">
+            <summary>
+            Repositório para produtos
+            </summary>
+        </member>
+    </members>
+</doc>

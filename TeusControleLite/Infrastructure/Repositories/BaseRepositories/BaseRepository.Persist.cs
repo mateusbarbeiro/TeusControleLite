@@ -1,0 +1,76 @@
+﻿using System;
+using System.Linq.Expressions;
+using TeusControleLite.Application.Interfaces.Repositories.BaseRepositories;
+using TeusControleLite.Domain.Models.CommonModels;
+using TeusControleLite.Infrastructure.Context;
+
+namespace TeusControleLite.Infrastructure.Repository
+{
+    /// <summary>
+    /// Classe genérica para repositório. CRUD genério.
+    /// </summary>
+    /// <typeparam name="TEntity"></typeparam>
+    public partial class BaseRepository<TEntity> : IBaseRepository<TEntity> where TEntity : BaseEntity
+    {
+        /// <summary>
+        /// Acesso a dados
+        /// </summary>
+        protected readonly ApiContext _context;
+
+        /// <summary>
+        /// Construtor classe genérica para repositórios
+        /// </summary>
+        /// <param name="context"></param>
+        public BaseRepository(ApiContext context)
+        {
+            _context = context;
+        }
+
+        /// <summary>
+        /// Insere um novo registro
+        /// </summary>
+        /// <param name="obj"></param>
+        public void Insert(TEntity obj)
+        {
+            _context.Set<TEntity>().Add(obj);
+            _context.SaveChanges();
+        }
+
+        /// <summary>
+        /// Atualiza um registro
+        /// </summary>
+        /// <param name="obj"></param>
+        public void Update(TEntity obj)
+        {
+            _context.Entry(obj).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+            _context.SaveChanges();
+        }
+
+        /// <summary>
+        /// Deleta um registro a partir do Id
+        /// </summary>
+        /// <param name="id"></param>
+        public void PhysicalDelete(long id)
+        {
+            _context.Set<TEntity>().Remove(Select(id));
+            _context.SaveChanges();
+        }
+
+        /// <summary>
+        /// Atualizar alguns campos
+        /// </summary>
+        /// <param name="entity"></param>
+        /// <param name="includeProperties"></param>
+        public void UpdateFields(TEntity entity, params Expression<Func<TEntity, object>>[] includeProperties)
+        {
+            var dbEntry = _context.Entry(entity);
+
+            foreach (var includeProperty in includeProperties)
+            {
+                dbEntry.Property(includeProperty).IsModified = true;
+            }
+
+            _context.SaveChanges();
+        }
+    }
+}
